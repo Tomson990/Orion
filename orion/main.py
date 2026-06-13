@@ -86,6 +86,7 @@ def run_briefing():
 
     print("[2/2] Generando briefing narrativo...")
     import sys
+    import os
     sys.path.insert(0, os.environ.get("NARRATIVE_INTEL_PATH", "/Users/tomasdelfino/Desktop/Narrative Intel/narrative_intelligence"))
     from analysis.briefing import generate_briefing, save_briefing
     briefing = generate_briefing()
