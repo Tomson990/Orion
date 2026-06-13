@@ -1,0 +1,42 @@
+name: ORION Briefing
+
+on:
+  schedule:
+    - cron: '0 10 * * *'   # 07:00 Argentina (mañana)
+    - cron: '0 16 * * *'   # 13:00 Argentina (mediodía)
+    - cron: '0 23 * * *'   # 20:00 Argentina (noche)
+  workflow_dispatch:         # También permite correrlo manualmente
+
+jobs:
+  briefing:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Run ORION Briefing
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
+        run: |
+          echo "Iniciando briefing ORION - $(date)"
+          python3 main.py --briefing
+          echo "Briefing completado - $(date)"
+
+      - name: Upload briefing as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: briefing-${{ github.run_id }}
+          path: briefings/
+          retention-days: 30
