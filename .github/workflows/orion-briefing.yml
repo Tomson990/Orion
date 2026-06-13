@@ -28,8 +28,7 @@ jobs:
         working-directory: orion
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
-          SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
+          PYTHONPATH: /home/runner/work/Orion/Orion/orion
         run: |
           echo "Iniciando briefing ORION - $(date)"
           python3 main.py --briefing
