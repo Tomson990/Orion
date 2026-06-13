@@ -30,7 +30,7 @@ jobs:
         working-directory: orion
         run: |
           echo "Actualizando precios - $(date)"
-          python3 main.py --commodities
+          python3 main.py --prices
           echo "Precios actualizados"
 
       - name: Commit updated database
