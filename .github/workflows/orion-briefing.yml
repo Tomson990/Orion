@@ -17,32 +17,19 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Checkout Narrative Intelligence
-        uses: actions/checkout@v4
-        with:
-          repository: Tomson990/narrative-intelligence
-          path: narrative_intelligence
-          token: ${{ secrets.GITHUB_TOKEN }}
-
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
 
-      - name: Install Orion dependencies
+      - name: Install dependencies
         working-directory: orion
         run: pip install -r requirements.txt
-
-      - name: Install Narrative Intelligence dependencies
-        working-directory: narrative_intelligence
-        run: |
-          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
       - name: Run ORION Briefing
         working-directory: orion
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-          NARRATIVE_INTEL_PATH: ${{ github.workspace }}/narrative_intelligence
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
         run: |
