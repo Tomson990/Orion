@@ -1,0 +1,150 @@
+# ============================================================
+# ORION — Fuentes RSS
+# Cobertura: Energía global, commodities, geopolítica energética
+# ============================================================
+
+sources:
+
+  # ── ENERGÍA GLOBAL — ESPECIALIZADA ──────────────────────────
+
+  - name: oilprice
+    url: https://oilprice.com/rss/main
+    domain: energia
+
+  - name: ft_energy
+    url: https://www.ft.com/energy?format=rss
+    domain: energia
+
+  - name: energy_monitor
+    url: https://www.energymonitor.ai/feed/
+    domain: energia
+
+  - name: recharge_news
+    url: https://www.rechargenews.com/rss
+    domain: energia
+
+  - name: spglobal_energy
+    url: https://www.spglobal.com/commodityinsights/en/rss-feed/oil
+    domain: energia
+
+  - name: naturalgasintel
+    url: https://www.naturalgasintel.com/feed/
+    domain: energia
+
+  - name: lngindustry
+    url: https://www.lngindustry.com/rss/
+    domain: energia
+
+  - name: upstreamonline
+    url: https://www.upstreamonline.com/rss.xml
+    domain: energia
+
+  - name: rigzone
+    url: https://www.rigzone.com/news/rss/rigzone_latest.aspx
+    domain: energia
+
+  - name: worldoil
+    url: https://www.worldoil.com/rss-feeds/all-news
+    domain: energia
+
+  - name: energyvoice
+    url: https://www.energyvoice.com/feed/
+    domain: energia
+
+  - name: power_magazine
+    url: https://www.powermag.com/feed/
+    domain: energia
+
+  # ── TRANSICIÓN ENERGÉTICA ────────────────────────────────────
+
+  - name: renewableenergyworld
+    url: https://www.renewableenergyworld.com/feed/
+    domain: transicion
+
+  - name: pv_magazine
+    url: https://www.pv-magazine.com/feed/
+    domain: transicion
+
+  - name: wind_power_monthly
+    url: https://www.windpowermonthly.com/rss
+    domain: transicion
+
+  - name: carbon_brief
+    url: https://www.carbonbrief.org/feed/
+    domain: transicion
+
+  - name: electrek
+    url: https://electrek.co/feed/
+    domain: transicion
+
+  # ── COMMODITIES Y MERCADOS ───────────────────────────────────
+
+  - name: bloomberg_markets
+    url: https://feeds.bloomberg.com/markets/news.rss
+    domain: mercados
+
+  - name: reuters_commodities
+    url: https://feeds.reuters.com/reuters/commoditiesNews
+    domain: mercados
+
+  - name: wsj_markets
+    url: https://feeds.a.dj.com/rss/RSSMarketsMain.xml
+    domain: mercados
+
+  - name: mining_com
+    url: https://www.mining.com/feed/
+    domain: mercados
+
+  # ── GEOPOLÍTICA ENERGÉTICA ───────────────────────────────────
+
+  - name: iea_news
+    url: https://www.iea.org/news/rss
+    domain: geopolitica
+
+  - name: opec_news
+    url: https://www.opec.org/opec_web/en/press_room/rss.htm
+    domain: geopolitica
+
+  - name: energypolicy
+    url: https://www.energypolicy.columbia.edu/feed/
+    domain: geopolitica
+
+  - name: middleeast_eye
+    url: https://www.middleeasteye.net/rss
+    domain: geopolitica
+
+  - name: kyiv_independent
+    url: https://kyivindependent.com/feed/
+    domain: geopolitica
+
+  - name: moscow_times
+    url: https://www.themoscowtimes.com/rss/news
+    domain: geopolitica
+
+  - name: aljazeera_english
+    url: https://www.aljazeera.com/xml/rss/all.xml
+    domain: geopolitica
+
+  # ── LATAM ENERGÍA ────────────────────────────────────────────
+
+  - name: energiaynegocios
+    url: https://energiaynegocios.com.ar/feed/
+    domain: latam
+
+  - name: ecojournal
+    url: https://ecojournal.com.ar/feed/
+    domain: latam
+
+  - name: bnamericas_energy
+    url: https://www.bnamericas.com/en/rss/energy
+    domain: latam
+
+  # ── FLETES Y SUPPLY CHAIN ────────────────────────────────────
+
+  - name: freightwaves
+    url: https://www.freightwaves.com/news/feed
+    domain: fletes
+
+  - name: lloyds_list
+    url: https://lloydslist.maritimeintelligence.informa.com/rss
+    domain: fletes
