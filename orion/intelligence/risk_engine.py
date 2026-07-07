@@ -180,6 +180,21 @@ def generate_daily_intelligence() -> dict:
     fecha_hoy = datetime.utcnow().strftime("%Y-%m-%d")
     price_dict = {p["commodity"]: p for p in prices}
 
+    # 5a. Snapshot diario del índice global (siempre se loguea, haya o no señales)
+    try:
+        log_alert(
+            fecha=fecha_hoy,
+            tipo_senal="daily_snapshot",
+            entidad="indice_global",
+            valor_indice=cost_pressure["index"],
+            nivel=cost_pressure["level"],
+            precio_referencia=None,
+            detalle={"signals_count": len(cost_pressure["signals"])}
+        )
+    except Exception as e:
+        print(f"  [WARN] No se pudo loguear snapshot diario: {e}")
+
+    # 5b. Señales individuales por commodity (solo cuando cruzan umbral)
     for signal in cost_pressure["signals"]:
         commodity_key = next(
             (k for k, v in COMMODITIES.items() if v.get("name") == signal["commodity"]),
@@ -199,6 +214,7 @@ def generate_daily_intelligence() -> dict:
         except Exception as e:
             print(f"  [WARN] No se pudo loguear alerta de {signal['commodity']}: {e}")
 
+    # 5c. Riesgo por compañía (solo cuando hay suficiente volumen de noticias)
     for company in company_risks:
         try:
             log_alert(
