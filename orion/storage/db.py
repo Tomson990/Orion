@@ -1,76 +1,33 @@
 """
 storage/db.py
-Base de datos SQLite para el sistema de inteligencia narrativa.
-Persiste artículos y sus embeddings.
+Persistencia de artículos y embeddings en Supabase (Postgres + pgvector).
 """
 
-import sqlite3
+import os
 import hashlib
 import numpy as np
-import json
 from datetime import datetime
-from pathlib import Path
 from typing import Optional
+from supabase import create_client
 
-DB_PATH = Path(__file__).parent.parent / "data" / "narratives.db"
+_client = None
 
-
-def get_connection() -> sqlite3.Connection:
-    DB_PATH.parent.mkdir(exist_ok=True)
-    conn = sqlite3.connect(DB_PATH)
-    conn.row_factory = sqlite3.Row
-    return conn
+def get_client():
+    global _client
+    if _client is None:
+        _client = create_client(os.environ["SUPABASE_URL"], os.environ["SUPABASE_KEY"])
+    return _client
 
 
 def init_db():
-    """Crea las tablas si no existen."""
-    conn = get_connection()
-    conn.executescript("""
-        CREATE TABLE IF NOT EXISTS articles (
-            id           TEXT PRIMARY KEY,
-            url          TEXT NOT NULL,
-            title        TEXT,
-            body         TEXT,
-            source       TEXT,
-            domain       TEXT,
-            published_at TEXT,
-            ingested_at  TEXT,
-            embedding    BLOB
-        );
-
-        CREATE INDEX IF NOT EXISTS idx_source      ON articles(source);
-        CREATE INDEX IF NOT EXISTS idx_domain      ON articles(domain);
-        CREATE INDEX IF NOT EXISTS idx_published   ON articles(published_at);
-
-        CREATE TABLE IF NOT EXISTS cluster_history (
-            id                  TEXT PRIMARY KEY,
-            date                TEXT NOT NULL,
-            representative_title TEXT,
-            size                INTEGER,
-            sources             TEXT,
-            domains             TEXT,
-            emergence_score     REAL,
-            is_new_topic        INTEGER,
-            first_seen          TEXT,
-            last_seen           TEXT,
-            centroid            BLOB
-        );
-
-        CREATE INDEX IF NOT EXISTS idx_cluster_date ON cluster_history(date);
-    """)
-    conn.commit()
-    conn.close()
-    print(f"[DB] Inicializada en {DB_PATH}")
+    """Las tablas ya se crearon a mano en el SQL Editor de Supabase. No-op."""
+    print("[DB] Usando Supabase — tablas ya inicializadas manualmente.")
 
 
 def article_exists(url: str) -> bool:
     article_id = hashlib.sha256(url.encode()).hexdigest()[:16]
-    conn = get_connection()
-    row = conn.execute(
-        "SELECT 1 FROM articles WHERE id = ?", (article_id,)
-    ).fetchone()
-    conn.close()
-    return row is not None
+    res = get_client().table("articles").select("id").eq("id", article_id).execute()
+    return len(res.data) > 0
 
 
 def save_article(
@@ -83,49 +40,31 @@ def save_article(
     embedding: np.ndarray
 ):
     article_id = hashlib.sha256(url.encode()).hexdigest()[:16]
-    embedding_blob = embedding.astype(np.float32).tobytes()
-
-    conn = get_connection()
-    conn.execute("""
-        INSERT OR IGNORE INTO articles
-            (id, url, title, body, source, domain, published_at, ingested_at, embedding)
-        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
-    """, (
-        article_id,
-        url,
-        title,
-        body[:2000],          # limitamos body para no inflar la DB
-        source,
-        domain,
-        published_at,
-        datetime.utcnow().isoformat(),
-        embedding_blob
-    ))
-    conn.commit()
-    conn.close()
+    get_client().table("articles").upsert({
+        "id": article_id,
+        "url": url,
+        "title": title,
+        "body": body[:2000],
+        "source": source,
+        "domain": domain,
+        "published_at": published_at,
+        "ingested_at": datetime.utcnow().isoformat(),
+        "embedding": embedding.astype(np.float32).tolist()
+    }).execute()
 
 
 def load_embeddings(domain: Optional[str] = None, limit: int = 5000):
     """
     Retorna lista de dicts con id, title, source, domain, published_at, embedding (np.ndarray).
-    Útil para Fase 2 (clustering).
     """
-    conn = get_connection()
+    query = get_client().table("articles").select("*")
     if domain:
-        rows = conn.execute(
-            "SELECT * FROM articles WHERE domain = ? ORDER BY published_at DESC LIMIT ?",
-            (domain, limit)
-        ).fetchall()
-    else:
-        rows = conn.execute(
-            "SELECT * FROM articles ORDER BY published_at DESC LIMIT ?",
-            (limit,)
-        ).fetchall()
-    conn.close()
+        query = query.eq("domain", domain)
+    res = query.order("published_at", desc=True).limit(limit).execute()
 
     results = []
-    for row in rows:
-        emb = np.frombuffer(row["embedding"], dtype=np.float32)
+    for row in res.data:
+        emb = np.array(row["embedding"], dtype=np.float32)
         results.append({
             "id": row["id"],
             "title": row["title"],
@@ -139,71 +78,51 @@ def load_embeddings(domain: Optional[str] = None, limit: int = 5000):
 
 
 def save_cluster_snapshot(clusters: list):
-    """
-    Persiste los clusters del día en cluster_history.
-    Permite comparación histórica entre corridas.
-    """
-    conn = get_connection()
     date = datetime.utcnow().strftime("%Y-%m-%d")
-
+    rows = []
     for cluster in clusters:
         cluster_id = hashlib.sha256(
             f"{date}_{cluster['representative_title'][:50]}".encode()
         ).hexdigest()[:16]
-
-        centroid_blob = cluster["centroid"].astype(np.float32).tobytes() if cluster.get("centroid") is not None else None
-
-        conn.execute("""
-            INSERT OR IGNORE INTO cluster_history
-                (id, date, representative_title, size, sources, domains,
-                 emergence_score, is_new_topic, first_seen, last_seen, centroid)
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-        """, (
-            cluster_id,
-            date,
-            cluster.get("representative_title", "")[:200],
-            cluster.get("size", 0),
-            json.dumps(cluster.get("sources", [])),
-            json.dumps(cluster.get("domains", [])),
-            cluster.get("emergence_score", 0),
-            1 if cluster.get("is_new_topic") else 0,
-            cluster.get("first_seen", ""),
-            cluster.get("last_seen", ""),
-            centroid_blob
-        ))
-
-    conn.commit()
-    conn.close()
-    print(f"[DB] {len(clusters)} clusters guardados en historial ({date})")
+        centroid = cluster.get("centroid")
+        rows.append({
+            "id": cluster_id,
+            "date": date,
+            "representative_title": cluster.get("representative_title", "")[:200],
+            "size": cluster.get("size", 0),
+            "sources": cluster.get("sources", []),
+            "domains": cluster.get("domains", []),
+            "emergence_score": cluster.get("emergence_score", 0),
+            "is_new_topic": bool(cluster.get("is_new_topic")),
+            "first_seen": cluster.get("first_seen", ""),
+            "last_seen": cluster.get("last_seen", ""),
+            "centroid": centroid.astype(np.float32).tolist() if centroid is not None else None
+        })
+    if rows:
+        get_client().table("cluster_history").upsert(rows).execute()
+    print(f"[DB] {len(rows)} clusters guardados en historial ({date})")
 
 
 def load_cluster_history(days: int = 30) -> list:
-    """
-    Carga el historial de clusters de los últimos N días.
-    Retorna lista de dicts con metadata de cada cluster histórico.
-    """
-    conn = get_connection()
-    rows = conn.execute("""
-        SELECT * FROM cluster_history
-        WHERE date >= date('now', ?)
-        ORDER BY date DESC, emergence_score DESC
-    """, (f"-{days} days",)).fetchall()
-    conn.close()
+    res = get_client().table("cluster_history") \
+        .select("*") \
+        .gte("date", f"now() - interval '{days} days'") \
+        .order("date", desc=True) \
+        .order("emergence_score", desc=True) \
+        .execute()
 
     results = []
-    for row in rows:
-        centroid = None
-        if row["centroid"]:
-            centroid = np.frombuffer(row["centroid"], dtype=np.float32)
+    for row in res.data:
+        centroid = np.array(row["centroid"], dtype=np.float32) if row.get("centroid") else None
         results.append({
             "id": row["id"],
             "date": row["date"],
             "representative_title": row["representative_title"],
             "size": row["size"],
-            "sources": json.loads(row["sources"]),
-            "domains": json.loads(row["domains"]),
+            "sources": row["sources"],
+            "domains": row["domains"],
             "emergence_score": row["emergence_score"],
-            "is_new_topic": bool(row["is_new_topic"]),
+            "is_new_topic": row["is_new_topic"],
             "first_seen": row["first_seen"],
             "last_seen": row["last_seen"],
             "centroid": centroid
@@ -213,57 +132,44 @@ def load_cluster_history(days: int = 30) -> list:
 
 def find_similar_historical(centroid: np.ndarray, days: int = 60, threshold: float = 0.7) -> list:
     """
-    Dado el centroide de un cluster actual, busca clusters históricos similares.
-    Retorna lista de clusters históricos ordenados por similitud.
+    Usa el operador <=> de pgvector (distancia coseno) vía RPC en vez de calcular en Python.
+    Requiere la función SQL 'match_clusters' (ver nota abajo).
     """
-    history = load_cluster_history(days=days)
-    similar = []
-
-    for h in history:
-        if h["centroid"] is None:
-            continue
-        sim = float(np.dot(centroid / np.linalg.norm(centroid),
-                           h["centroid"] / np.linalg.norm(h["centroid"])))
-        if sim >= threshold:
-            similar.append({**h, "similarity": round(sim, 3)})
-
-    similar.sort(key=lambda x: x["similarity"], reverse=True)
-    return similar
+    res = get_client().rpc("match_clusters", {
+        "query_embedding": centroid.astype(np.float32).tolist(),
+        "match_threshold": threshold,
+        "days_back": days
+    }).execute()
+    return [{**row, "similarity": round(row["similarity"], 3)} for row in res.data]
 
 
 def cluster_history_stats() -> dict:
-    """Estadísticas del historial de clusters."""
-    conn = get_connection()
-    total = conn.execute("SELECT COUNT(*) FROM cluster_history").fetchone()[0]
-    days = conn.execute("SELECT COUNT(DISTINCT date) FROM cluster_history").fetchone()[0]
-    top = conn.execute("""
-        SELECT representative_title, COUNT(*) as recurrences, AVG(emergence_score) as avg_score
-        FROM cluster_history
-        GROUP BY representative_title
-        ORDER BY recurrences DESC
-        LIMIT 10
-    """).fetchall()
-    conn.close()
-    return {
-        "total_snapshots": total,
-        "days_tracked": days,
-        "top_recurring": [{"title": r["representative_title"], "recurrences": r["recurrences"], "avg_score": round(r["avg_score"], 2)} for r in top]
-    }
+    res = get_client().table("cluster_history").select("representative_title, emergence_score, date").execute()
+    rows = res.data
+    total = len(rows)
+    days = len(set(r["date"] for r in rows))
+
+    from collections import defaultdict
+    grouped = defaultdict(list)
+    for r in rows:
+        grouped[r["representative_title"]].append(r["emergence_score"])
+
+    top = sorted(
+        [{"title": k, "recurrences": len(v), "avg_score": round(sum(v)/len(v), 2)} for k, v in grouped.items()],
+        key=lambda x: x["recurrences"], reverse=True
+    )[:10]
+
+    return {"total_snapshots": total, "days_tracked": days, "top_recurring": top}
 
 
 def stats() -> dict:
-    """Estadísticas rápidas de la DB."""
-    conn = get_connection()
-    total = conn.execute("SELECT COUNT(*) FROM articles").fetchone()[0]
-    by_source = conn.execute(
-        "SELECT source, COUNT(*) as n FROM articles GROUP BY source ORDER BY n DESC"
-    ).fetchall()
-    by_domain = conn.execute(
-        "SELECT domain, COUNT(*) as n FROM articles GROUP BY domain ORDER BY n DESC"
-    ).fetchall()
-    conn.close()
+    res = get_client().table("articles").select("source, domain").execute()
+    rows = res.data
+    from collections import Counter
+    by_source = Counter(r["source"] for r in rows)
+    by_domain = Counter(r["domain"] for r in rows)
     return {
-        "total": total,
-        "by_source": {r["source"]: r["n"] for r in by_source},
-        "by_domain": {r["domain"]: r["n"] for r in by_domain}
+        "total": len(rows),
+        "by_source": dict(by_source),
+        "by_domain": dict(by_domain)
     }
