@@ -216,7 +216,7 @@ def generate_briefing(window_hours: int = 48, domain: str = None) -> str:
                 "content-type": "application/json",
             },
             json={
-                "model": "claude-sonnet-4-20250514",
+                "model": "claude-sonnet-5",
                 "max_tokens": 2000,
                 "messages": [{"role": "user", "content": prompt}]
             },
@@ -224,7 +224,8 @@ def generate_briefing(window_hours: int = 48, domain: str = None) -> str:
         )
         response.raise_for_status()
         data = response.json()
-        return data["content"][0]["text"]
+        text_blocks = [b["text"] for b in data["content"] if b.get("type") == "text"]
+        return "\n".join(text_blocks) if text_blocks else "[ERROR] Respuesta sin bloque de texto."
 
     except httpx.HTTPStatusError as e:
         return f"[ERROR API] {e.response.status_code}: {e.response.text}"
