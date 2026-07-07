@@ -10,6 +10,7 @@ from datetime import datetime
 from pathlib import Path
 from ingestion.commodities import get_conn, get_latest_prices_simple, COMMODITIES
 from ingestion.company_news import get_recent_company_news, get_company_summary, COMPANIES
+from storage.db import log_alert
 
 # Umbrales de cambio para alertas (% semanal)
 ALERT_THRESHOLDS = {
@@ -175,13 +176,50 @@ def generate_daily_intelligence() -> dict:
     # 4. Top señales
     top_signals = cost_pressure["signals"][:5]
 
-    # Guardar en DB
+    # 5. Log de alertas en Supabase para track record (Fase 1)
+    fecha_hoy = datetime.utcnow().strftime("%Y-%m-%d")
+    price_dict = {p["commodity"]: p for p in prices}
+
+    for signal in cost_pressure["signals"]:
+        commodity_key = next(
+            (k for k, v in COMMODITIES.items() if v.get("name") == signal["commodity"]),
+            signal["commodity"]
+        )
+        precio_ref = price_dict.get(commodity_key, {}).get("price")
+        try:
+            log_alert(
+                fecha=fecha_hoy,
+                tipo_senal="cost_pressure",
+                entidad=signal["commodity"],
+                valor_indice=cost_pressure["index"],
+                nivel=signal["level"].upper(),
+                precio_referencia=precio_ref,
+                detalle=signal
+            )
+        except Exception as e:
+            print(f"  [WARN] No se pudo loguear alerta de {signal['commodity']}: {e}")
+
+    for company in company_risks:
+        try:
+            log_alert(
+                fecha=fecha_hoy,
+                tipo_senal="company_risk",
+                entidad=company["name"],
+                valor_indice=company["news_count"],
+                nivel=company["risk_level"],
+                precio_referencia=None,
+                detalle=company
+            )
+        except Exception as e:
+            print(f"  [WARN] No se pudo loguear alerta de {company['name']}: {e}")
+
+    # Guardar en DB (sqlite, sin cambios)
     conn = get_conn()
     conn.execute("""
         INSERT INTO risk_scores (date, sector, score, level, signals)
         VALUES (?, ?, ?, ?, ?)
     """, (
-        datetime.utcnow().strftime("%Y-%m-%d"),
+        fecha_hoy,
         "energia",
         cost_pressure["index"],
         cost_pressure["level"],
@@ -191,7 +229,7 @@ def generate_daily_intelligence() -> dict:
     conn.close()
 
     return {
-        "date": datetime.utcnow().strftime("%Y-%m-%d"),
+        "date": fecha_hoy,
         "cost_pressure": cost_pressure,
         "prices": prices,
         "company_risks": company_risks[:10],
