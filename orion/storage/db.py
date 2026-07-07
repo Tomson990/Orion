@@ -64,7 +64,10 @@ def load_embeddings(domain: Optional[str] = None, limit: int = 5000):
 
     results = []
     for row in res.data:
-        emb = np.array(row["embedding"], dtype=np.float32)
+        raw = row["embedding"]
+        if isinstance(raw, str):
+            raw = raw.strip("[]").split(",")
+        emb = np.array(raw, dtype=np.float32)
         results.append({
             "id": row["id"],
             "title": row["title"],
@@ -133,7 +136,7 @@ def load_cluster_history(days: int = 30) -> list:
 def find_similar_historical(centroid: np.ndarray, days: int = 60, threshold: float = 0.7) -> list:
     """
     Usa el operador <=> de pgvector (distancia coseno) vía RPC en vez de calcular en Python.
-    Requiere la función SQL 'match_clusters' (ver nota abajo).
+    Requiere la función SQL 'match_clusters'.
     """
     res = get_client().rpc("match_clusters", {
         "query_embedding": centroid.astype(np.float32).tolist(),
