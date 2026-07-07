@@ -8,7 +8,7 @@ Uso:
     python main.py --news       # solo noticias
     python main.py --intel      # solo reporte de inteligencia
     python main.py --report     # mostrar reporte actual
-    python main.py --briefing   # briefing narrativo + precios
+    python main.py --briefing   # briefing narrativo + precios + log de alertas
 """
 import argparse
 import sys
@@ -78,13 +78,17 @@ def run_briefing():
     print("\n◈ ORION — Energy Briefing")
     print("=" * 45)
 
-    print("[1/2] Verificando precios...")
+    print("[1/3] Verificando precios...")
     prices = get_latest_prices_simple()
     if not prices:
         print("  Sin precios en DB — descargando...")
         fetch_all_commodities()
 
-    print("[2/2] Generando briefing narrativo...")
+    print("[2/3] Generando inteligencia y logueando alertas...")
+    intel = generate_daily_intelligence()
+    print(f"  Índice de presión: {intel['cost_pressure']['index']} ({intel['cost_pressure']['level']})")
+
+    print("[3/3] Generando briefing narrativo...")
     import sys
     import os
     sys.path.insert(0, os.environ.get("NARRATIVE_INTEL_PATH", "/Users/tomasdelfino/Desktop/Narrative Intel/narrative_intelligence"))
@@ -107,7 +111,7 @@ if __name__ == "__main__":
     parser.add_argument("--news",     action="store_true", help="Solo noticias de compañías")
     parser.add_argument("--intel",    action="store_true", help="Solo reporte de inteligencia")
     parser.add_argument("--report",   action="store_true", help="Mostrar reporte actual")
-    parser.add_argument("--briefing", action="store_true", help="Briefing narrativo + precios")
+    parser.add_argument("--briefing", action="store_true", help="Briefing narrativo + precios + log de alertas")
     args = parser.parse_args()
 
     if args.prices:
