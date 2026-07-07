@@ -175,4 +175,15 @@ def stats() -> dict:
         "total": len(rows),
         "by_source": dict(by_source),
         "by_domain": dict(by_domain)
+        
+def log_alert(fecha, tipo_senal, entidad, valor_indice, nivel, precio_referencia, detalle):
+    get_client().table("alerts_log").insert({
+        "fecha": fecha,
+        "tipo_senal": tipo_senal,
+        "entidad": entidad,
+        "valor_indice": valor_indice,
+        "nivel": nivel,
+        "precio_referencia": precio_referencia,
+        "detalle": detalle
+    }).execute()        
     }
