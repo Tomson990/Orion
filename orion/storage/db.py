@@ -175,8 +175,11 @@ def stats() -> dict:
         "total": len(rows),
         "by_source": dict(by_source),
         "by_domain": dict(by_domain)
-        
+    }
+
+
 def log_alert(fecha, tipo_senal, entidad, valor_indice, nivel, precio_referencia, detalle):
+    """Log de alertas para construir track record (Fase 1)."""
     get_client().table("alerts_log").insert({
         "fecha": fecha,
         "tipo_senal": tipo_senal,
@@ -185,5 +188,4 @@ def log_alert(fecha, tipo_senal, entidad, valor_indice, nivel, precio_referencia
         "nivel": nivel,
         "precio_referencia": precio_referencia,
         "detalle": detalle
-    }).execute()        
-    }
+    }).execute()
