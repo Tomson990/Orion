@@ -2,6 +2,7 @@
 analysis/briefing.py
 Fase 3 — Briefing diario con contexto histórico desde Supabase.
 Integrado con ORION para incluir precios de commodities energéticos.
+Prompt orientado a supply chain / sourcing de AES.
 """
 
 import os
@@ -92,7 +93,10 @@ def get_historical_context(clusters: list) -> str:
 
 
 def build_prompt(clusters: list, prices: dict = None) -> str:
-    """Construye el prompt para Claude con clusters energéticos y precios."""
+    """
+    Construye el prompt para Claude con clusters energéticos, precios y
+    contexto histórico, orientado a supply chain / sourcing de AES.
+    """
     if not clusters:
         return ""
 
@@ -127,8 +131,13 @@ Artículos principales:
     contradictions = detect_all_contradictions(clusters[:8])
     contradiction_text = format_contradiction_for_briefing(contradictions)
 
-    return f"""Sos un analista de inteligencia energética global.
-Fecha de hoy: {hoy}
+    return f"""Sos un analista de inteligencia de supply chain y sourcing para AES, empresa global de energía con operaciones en Estados Unidos, México, Argentina, Chile, Colombia, Panamá, República Dominicana, El Salvador y Brasil.
+
+AES opera plantas de generación térmica, hidro, solar, eólica y almacenamiento de energía. Sus principales categorías de compra son: transformadores de potencia, cables eléctricos, acero estructural, paneles solares, aerogeneradores, equipos de almacenamiento (baterías), gas natural y LNG, servicios de O&M, materiales de MRO (mantenimiento, reparación y operaciones).
+
+Los commodities que más impactan sus costos son: cobre (cables y transformadores), acero (estructuras), aluminio (cables), litio (baterías), gas natural (generación térmica), petróleo (logística y operaciones).
+
+Hoy es {hoy}.
 
 {prices_text}
 
@@ -141,23 +150,24 @@ CONTEXTO HISTÓRICO (últimos 60 días):
 
 {contradiction_text}
 
-Generá un briefing de inteligencia energética con este formato exacto:
+Generá un briefing de inteligencia accionable para el equipo de supply chain de AES, con este formato exacto:
 
-ORION ENERGY INTELLIGENCE — {hoy}
+ORION ENERGY INTELLIGENCE — AES
+{hoy}
 ================================
 
 PULSO DE MERCADO
 [2-3 oraciones conectando los movimientos de precio del día con el contexto narrativo]
 
-[Para cada narrativa relevante:]
+[Para cada narrativa relevante para AES:]
 
 ## [NÚMERO]. [TÍTULO CONCISO] — [NIVEL: ALTA/MEDIA/BAJA]
 
 **Qué está pasando:** [2-3 oraciones]
-**Impacto en precios:** [Cómo se relaciona con los movimientos del día, si aplica]
+**Impacto para AES:** [Cómo afecta específicamente a las operaciones o compras de AES en la región — categorías de compra, commodities, países donde opera]
 **Historial:** [Si reapareció o es nueva]
 **Tensión narrativa:** [Contradicciones entre fuentes si las hay]
-**Señal vs ruido:** [1 oración]
+**Acción recomendada:** [Qué debería considerar el equipo de supply chain]
 
 ---
 
@@ -166,10 +176,15 @@ TENSIONES ACTIVAS
 
 ---
 
-SÍNTESIS EJECUTIVA
-[3-4 oraciones sobre el estado del mercado energético global hoy]
+ALERTAS DE COSTO
+[Movimientos de precio de commodities críticos para AES esta semana]
 
-Sé directo, específico y accionable."""
+---
+
+SÍNTESIS EJECUTIVA
+[3-4 oraciones sobre el panorama para supply chain de AES hoy]
+
+Prioriza noticias que afecten: precios de insumos críticos, disrupciones logísticas en Latinoamérica y Centroamérica, cambios regulatorios en los países donde opera AES, proyectos de energía renovable en la región. Sé directo y accionable."""
 
 
 def generate_briefing(window_hours: int = 48, domain: str = None) -> str:
@@ -220,7 +235,7 @@ def generate_briefing(window_hours: int = 48, domain: str = None) -> str:
                 "max_tokens": 6000,
                 "messages": [{"role": "user", "content": prompt}]
             },
-            timeout=60.0
+            timeout=90.0
         )
         response.raise_for_status()
         data = response.json()
