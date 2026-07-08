@@ -224,12 +224,21 @@ def generate_briefing(window_hours: int = 48, domain: str = None) -> str:
         )
         response.raise_for_status()
         data = response.json()
-        return data["content"][0]["text"]
+
+        content_blocks = data.get("content", [])
+        text_blocks = [b.get("text", "") for b in content_blocks if b.get("type") == "text"]
+        text_blocks = [t for t in text_blocks if t]
+
+        if not text_blocks:
+            print(f"[Briefing] Respuesta sin texto utilizable. Bloques recibidos: {content_blocks}")
+            return "[ERROR] Respuesta sin bloque de texto."
+
+        return "\n".join(text_blocks)
 
     except httpx.HTTPStatusError as e:
         return f"[ERROR API] {e.response.status_code}: {e.response.text}"
     except Exception as e:
-        return f"[ERROR] {e}"
+        return f"[ERROR] {type(e).__name__}: {e}"
 
 
 def save_briefing(text: str):
