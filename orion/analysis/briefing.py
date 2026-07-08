@@ -217,7 +217,7 @@ def generate_briefing(window_hours: int = 48, domain: str = None) -> str:
             },
             json={
                 "model": "claude-sonnet-5",
-                "max_tokens": 2000,
+                "max_tokens": 6000,
                 "messages": [{"role": "user", "content": prompt}]
             },
             timeout=60.0
