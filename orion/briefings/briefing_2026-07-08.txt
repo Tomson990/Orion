@@ -1,1 +1,43 @@
-[ERROR] 'text'
+# ORION ENERGY INTELLIGENCE — 08 de July de 2026
+================================
+
+## PULSO DE MERCADO
+El crudo dispara con fuerza (Brent +5.8%, WTI +5.6%) y el TTF europeo salta 6.2%, movimientos consistentes con la escalada Irán-EE.UU. cerca del Estrecho de Ormuz —reportes de explosiones y ataques militares confirmados en las últimas horas. El Henry Hub se mantiene relativamente contenido (+1.4%), reflejando que el mercado de gas norteamericano está menos expuesto al riesgo de tránsito de Ormuz que el crudo global y el gas europeo. La suba conjunta de Brent/WTI/TTF con prima de riesgo geopolítico sugiere que el mercado está pricing una disrupción real o inminente de suministro, no solo ruido especulativo.
+
+---
+
+## 4. Escalada militar EE.UU.-Irán con amenaza sobre Ormuz — NIVEL: ALTA
+
+**Qué está pasando:** Irán reporta explosiones cerca del Estrecho de Ormuz mientras el Pentágono confirma strikes activos y promete atacar "instalaciones clave". Trump endurece condiciones y desconfianza mutua se profundiza; en paralelo, se ordena downsizing de inteligencia interna en EE.UU., señal de reorganización institucional en medio de la crisis.
+**Impacto en precios:** Es el driver más directo del salto de +5.8% en Brent y +6.2% en TTF — Ormuz es la arteria del 20% del petróleo mundial. La correlación temporal (Henry Hub casi plano vs. Brent/TTF disparados) confirma que el mercado está pricing riesgo de tránsito marítimo específicamente.
+**Historial:** Reapareció el 31 de mayo con 16 artículos bajo un framing de "advertencia sin conflicto reabierto"; hoy con 43 artículos, la narrativa escaló de amenaza retórica a acción militar confirmada.
+**Tensión narrativa:** No se detectaron gaps de tono explícitos, pero la velocidad del salto de "advertencia" a "strikes confirmados" en 5 semanas sugiere subestimación previa del riesgo por el mercado.
+**Señal vs ruido:** SEÑAL FUERTE — esto es el evento que está moviendo los precios hoy, no ruido de fondo.
+
+---
+
+## 5. OPEP+ sube cuotas pero Ormuz neutraliza el efecto — NIVEL: ALTA
+
+**Qué está pasando:** OPEP+ incrementó cuotas de producción por cuarto mes consecutivo, medida que normalmente presionaría precios a la baja, pero el bloqueo/riesgo en Ormuz está neutralizando ese efecto expansivo. Contexto mixto con narrativas de salarios argentinos y mercados de deuda que sugieren ansiedad más amplia sobre inflación (ver comentario de Warsh sobre nuevo enfoque de la Fed).
+**Impacto en precios:** Explica por qué, pese a más oferta OPEP+, el Brent sube en vez de bajar — el mercado está descontando que la oferta adicional no compensa el riesgo de cierre de Ormuz.
+**Historial:** Reapareció el 31 de mayo (18 artículos) como narrativa de política interna/salarial; hoy conecta explícitamente con geopolítica energética.
+**Tensión narrativa:** Ninguna detectada explícitamente, pero hay tensión implícita entre la lógica de "más oferta = precios bajos" y la realidad de mercado.
+**Señal vs ruido:** SEÑAL — confirma que el mercado está descontando escenario de disrupción física, no solo especulación.
+
+---
+
+## 2. Ataques con drones ucranianos a sitios industriales rusos — NIVEL: MEDIA
+
+**Qué está pasando:** Drones ucranianos dañan instalaciones industriales rusas mientras Moscú enfrenta fallos en subastas de activos estatales (oro) y tensiones internas (arrestos, presión judicial con Bielorrusia). Kremlin también negocia reubicación de bases militares en Siria.
+**Impacto en precios:** Contribuye marginalmente a la prima de riesgo en energía europea (TTF), aunque el driver principal hoy es Ormuz, no Rusia-Ucrania.
+**Historial:** Reapareció el 31 de mayo con 18 artículos bajo un ángulo de instalaciones nucleares; hoy con 56 artículos y foco en industria energética/exportadora.
+**Tensión narrativa:** Gap de tono alto (2.00) — oilprice/moscow_times enmarcan como daño limitado/controlado; NYT/Bloomberg enmarcan como escalada significativa. Fuentes especializadas en energía minimizan el riesgo, medios generalistas lo amplifican.
+**Señal vs ruido:** RUIDO RELATIVO hoy — el mercado está más enfocado en Ormuz; monitorear si escala a infraestructura de exportación energética rusa.
+
+---
+
+## 3. Israel expande control militar en el sur del Líbano — NIVEL: MEDIA
+
+**Qué está pasando:** Israel captura una fortaleza medieval simbólica en el sur del Líbano y continúa operaciones que han dejado 16 muertos, mientras la ONU anuncia investigación por violaciones al derecho internacional.
+**Impacto en precios:** Impacto indirecto — contribuye al clima de riesgo geopolítico regional en Medio Oriente que refuerza la prima de Ormuz, aunque no es el driver directo.
+**Historial:** Reapareció el 6 de
