@@ -1,1 +1,49 @@
-[ERROR] 'text'
+ORION ENERGY INTELLIGENCE — 08 de July de 2026
+================================
+
+PULSO DE MERCADO
+El crudo se dispara (Brent +5.8%, WTI +5.6%) y el TTF europeo sube 6.2%, reflejando el shock de la crisis de Irán/Hormuz que domina el ciclo noticioso. Henry Hub sube más moderadamente (+1.4%), sostenido por demanda de power burn y calor estival en EE.UU. más que por el factor geopolítico. La combinación de escalada militar en Medio Oriente y rutas alternativas de suministro (pipelines, Kuwait a Asia) está redefiniendo simultáneamente precios y cadenas logísticas globales.
+
+## 1. Crisis de Hormuz e inflación energética vía Irán — ALTA
+
+**Qué está pasando:** La tensión militar entre EE.UU./Trump e Irán está impulsando al crudo al alza mientras posiciones cortas previas se deshacen ante el temor a un cierre prolongado del Estrecho de Hormuz. Simultáneamente, la demanda de gas natural por calor extremo en el sureste de EE.UU. está empujando precios cash cerca de $4/MMBtu, agravando la narrativa inflacionaria.
+**Impacto en precios:** Explica directamente el salto de 5-6% en Brent/WTI hoy; el repunte de Henry Hub es más un efecto de demanda estacional que geopolítico, aunque ambos convergen en la narrativa de "inflación energética".
+**Historial:** Nueva (primera detección en 60 días), pero con score de emergencia alto (0.50) y 37 artículos — indica que el mercado recién está descontando esta escalada.
+**Tensión narrativa:** No detectada explícitamente, pero el hecho de que traders shorteaban crudo "como si Hormuz hubiera terminado" (oilprice) sugiere sorpresa y reposicionamiento forzado.
+**Señal vs ruido:** Señal fuerte — es el driver dominante de todos los precios de hoy y merece seguimiento hora a hora.
+
+## 2. Almacenamiento de baterías y transición eléctrica — MEDIA
+
+**Qué está pasando:** Fuerte actividad en storage (37 ofertas en Alma SADI, Sungrow-Masdar 7.5GWh) coincide con hito simbólico: solar superó al carbón en el mix eléctrico de EE.UU. por primera vez. Paralelamente, tensiones en la cadena de suministro de cobalto (DR Congo) y apuestas de GM en sodio-ion muestran fricción en la carrera tecnológica.
+**Impacto en precios:** Sin impacto directo hoy en Brent/TTF/Henry Hub, pero es relevante para el mediano plazo de demanda de gas para generación.
+**Historial:** Nueva.
+**Tensión narrativa:** Gap de tono ALTA (2.00) — ft_energy más optimista sobre transición vs. oilprice/power_magazine con framing más escéptico (ej. "el mayor fabricante de baterías se aleja de los EV").
+**Señal vs ruido:** Señal moderada — hito estructural real, pero el ruido narrativo sobre "quién gana la carrera de baterías" excede su relevancia inmediata para precios.
+
+## 3. Nuclear y diversificación de uranio — MEDIA
+
+**Qué está pasando:** Impulso narrativo hacia combustible nuclear gastado y microrreactores como respuesta a dependencia de Rusia, en paralelo con impacto económico de la crisis de Irán sobre el Reino Unido.
+**Impacto en precios:** Indirecto; refuerza la narrativa de búsqueda de alternativas energéticas ante shocks geopolíticos, sin mover precios spot hoy.
+**Historial:** Nueva.
+**Tensión narrativa:** Gap ALTA (2.00) — oilprice/rigzone con tono más promocional sobre soluciones nucleares vs. energiaynegocios más cauteloso.
+**Señal vs ruido:** Ruido moderado — tema estructural de largo plazo, no accionable para el trading de hoy.
+
+## 4. Crisis de gobernanza en BP — BAJA
+
+**Qué está pasando:** Disputa interna en el directorio de BP sobre bullying, cambios de estructura del CEO, y presión de inversores por "mala gestión".
+**Impacto en precios:** Ninguno directo sobre benchmarks globales; es ruido corporativo específico de una empresa.
+**Historial:** Nueva.
+**Tensión narrativa:** Gap ALTA (2.00) — rigzone presenta framing positivo (liderazgo firme de O'Neill) vs. ft_energy con tono crítico ("reino mal gestionado").
+**Señal vs ruido:** Ruido — relevante para inversores de BP específicamente, no para el mercado energético global.
+
+## 5. Proyectos de infraestructura renovable/LNG en expansión — BAJA
+
+**Qué está pasando:** Múltiples anuncios de proyectos (fusión nuclear DOE-Xcimer, LNG en Canadá con tribus, solar en Omán, eólico offshore) muestran actividad normal de desarrollo de infraestructura energética global.
+**Impacto en precios:** Nulo en el corto plazo.
+**Historial:** Nueva.
+**Tensión narrativa:** No detectada.
+**Señal vs ruido:** Ruido — cobertura rutinaria de proyectos sin impacto de mercado inmediato.
+
+## 6. Rutas alternativas ante bloqueo de Hormuz — ALTA
+
+**Qué está pasando
