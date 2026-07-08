@@ -7,6 +7,7 @@ Prompt orientado a supply chain / sourcing de AES.
 
 import os
 import sys
+import json
 import httpx
 from datetime import datetime
 from analysis.clustering import detect_emerging, cluster_articles
