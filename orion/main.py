@@ -93,7 +93,7 @@ def run_briefing():
     import os
     sys.path.insert(0, os.environ.get("NARRATIVE_INTEL_PATH", "/Users/tomasdelfino/Desktop/Narrative Intel/narrative_intelligence"))
     from analysis.briefing import generate_briefing, save_briefing
-    briefing = generate_briefing()
+    briefing = generate_briefing(domain="energia")
 
     print("\n" + "=" * 45)
     print(briefing)
