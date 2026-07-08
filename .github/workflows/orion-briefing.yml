@@ -1,31 +1,25 @@
 name: ORION Briefing
-
 on:
   schedule:
     - cron: '10 10 * * *'   # 07:10 Argentina (mañana)
     - cron: '10 16 * * *'   # 13:10 Argentina (mediodía)
     - cron: '10 23 * * *'   # 20:10 Argentina (noche)
   workflow_dispatch:
-
 jobs:
   briefing:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout Orion
         uses: actions/checkout@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-
       - name: Install dependencies
         working-directory: orion
         run: pip install -r requirements.txt
-
       - name: Run ORION Briefing
         working-directory: orion
         env:
@@ -36,7 +30,13 @@ jobs:
           echo "Iniciando briefing ORION - $(date)"
           python3 main.py --briefing
           echo "Briefing completado - $(date)"
-
+      - name: Commit briefing file
+        run: |
+          git config --global user.name "ORION Bot"
+          git config --global user.email "orion@github-actions"
+          git add orion/briefings/
+          git diff --staged --quiet || git commit -m "briefing: $(date +'%Y-%m-%d %H:%M') ART"
+          git push
       - name: Upload briefing as artifact
         uses: actions/upload-artifact@v4
         with:
