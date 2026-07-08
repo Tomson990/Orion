@@ -238,7 +238,7 @@ def generate_briefing(window_hours: int = 48, domain: str = None) -> str:
             timeout=90.0
         )
         response.raise_for_status()
-        data = response.json()
+        data = json.loads(response.content.decode("utf-8"))
 
         content_blocks = data.get("content", [])
         text_blocks = [b.get("text", "") for b in content_blocks if b.get("type") == "text"]
