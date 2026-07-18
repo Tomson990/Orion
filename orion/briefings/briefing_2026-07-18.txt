@@ -1,0 +1,51 @@
+ORION ENERGY INTELLIGENCE — AES
+18 de July de 2026
+================================
+
+PULSO DE MERCADO
+El crudo (Brent +4.6%, WTI +3.6%) y el gas natural (Henry Hub +2.0%, TTF +2.8%) suben con fuerza en simultáneo, impulsados por la escalada Irán-Hormuz y su efecto en fletes y suministro de LNG. Para AES esto implica presión inmediata sobre costos de generación térmica y logística, mientras el mercado de renovables/baterías sigue creciendo estructuralmente pero con cuellos de botella en materias primas críticas (cobalto, litio).
+
+## 1. Crisis de Hormuz y contagio a precios de energía — ALTA
+
+**Qué está pasando:** La tensión con Irán y amenazas de cierre del Estrecho de Hormuz están elevando simultáneamente petróleo y gas natural, con inflación de costos en EE.UU. y desabastecimiento de LNG en Asia que empuja a esos mercados hacia carbón. Traders ya empiezan a apostar a que lo peor pasó (shorts en crudo), generando volatilidad extrema.
+**Impacto para AES:** Afecta directamente costos de generación térmica (gas natural) en Argentina, Chile, Colombia, RD y El Salvador, y encarece logística marítima (fletes, seguros) para equipos importados —transformadores, cables, aerogeneradores— desde Asia y Medio Oriente. También presiona precios de combustibles usados en O&M y transporte.
+**Historial:** Narrativa nueva en los últimos 60 días, pero de alta intensidad inmediata.
+**Tensión narrativa:** Mercado dividido entre pánico (Hormuz shutdown, Malaysia reroutea crudo) y apuesta contraria (shorts asumiendo que la crisis ya pasó) — alta incertidumbre de corto plazo.
+**Acción recomendada:** Congelar cotizaciones de gas y fletes marítimos por 30-45 días; activar cláusulas de hedge en contratos de combustible; revisar rutas alternativas de importación de equipos críticos (evitar tránsito por Hormuz/Golfo Pérsico).
+
+## 2. Boom de almacenamiento de baterías y tensión en cobalto/litio — ALTA
+
+**Qué está pasando:** Fuerte impulso a proyectos de storage (Sungrow-Masdar 7.5GWh, Alma SADI en Argentina con 37 ofertas) coincide con restricciones de exportación de cobalto desde RD Congo y avances de GM en baterías de sodio para reducir dependencia de China. Solar superó al carbón en EE.UU. por primera vez.
+**Impacto para AES:** Impacto directo en la categoría de equipos de almacenamiento (baterías) — posible encarecimiento de celdas por escasez de cobalto, aunque alternativas de sodio-ion podrían abrir opciones de diversificación de proveedores a mediano plazo. Relevante para proyectos de storage de AES en Chile, RD, El Salvador y la oferta reciente en Argentina (Alma SADI).
+**Historial:** Nueva, sin precedente en 60 días previos.
+**Tensión narrativa:** Framing positivo (ft_energy) sobre expansión de storage vs. framing negativo (oilprice, power_magazine) que resalta riesgos de suministro de materiales críticos — gap de tono alto (2.00).
+**Acción recomendada:** Diversificar proveedores de baterías (evaluar sodio-ion como hedge), asegurar contratos de litio/cobalto a mediano plazo antes de mayor escasez, y monitorear de cerca el proceso de Alma SADI en Argentina como oportunidad/benchmark de precios regionales.
+
+## 3. Reconfiguración de rutas logísticas y suministro por bloqueo de Hormuz — MEDIA
+
+**Qué está pasando:** Países del Golfo negocian pipelines alternativos para evitar Hormuz; Malasia y Kuwait ya reconfiguran cadenas de suministro de crudo hacia Asia. Asia recurre más a carbón por escasez de LNG.
+**Impacto para AES:** Riesgo indirecto de mayor volatilidad y demora en insumos importados desde Asia/Medio Oriente (transformadores, componentes electrónicos, acero) que afectan proyectos en construcción en toda la región.
+**Historial:** Nueva, ligada a Narrativa #1.
+**Tensión narrativa:** Ninguna detectada explícitamente, pero coexiste con narrativa de "crisis ya superada" (shorts en crudo).
+**Acción recomendada:** Mapear proveedores críticos con exposición a rutas por Hormuz y activar planes de contingencia con proveedores alternativos en Occidente (EE.UU., Brasil, Europa).
+
+---
+
+TENSIONES ACTIVAS
+- **Almacenamiento de baterías:** ft_energy optimista sobre expansión de storage vs. oilprice/power_magazine advirtiendo sobre escasez de cobalto y limitaciones tecnológicas (gap 2.00).
+- **Energía nuclear/uranio:** rigzone y oilprice promueven soluciones nucleares (combustible gastado, microreactores) como respuesta a dependencia de Rusia, mientras energiaynegocios mantiene tono escéptico (gap 2.00) — relevante si AES explora diversificación energética a futuro.
+- **Corporativo (BP):** rigzone destaca liderazgo fuerte del nuevo CEO vs. ft_energy que expone conflictos internos y presión de inversionistas — relevante como proveedor/contraparte en contratos de gas y trading.
+
+---
+
+ALERTAS DE COSTO
+- **Petróleo (Brent/WTI):** +4.6% / +3.6% en 24-48h — impacto directo en logística y combustibles de operación.
+- **Gas natural (Henry Hub):** +2.0%, con cash prices regionales en EE.UU. cercanos a $4/MMBtu por calor extremo — presión sobre costos de generación térmica.
+- **TTF (Europa):** +2.8% — señal de tensión global en LNG que puede encarecer contratos spot para plantas que dependen de importación.
+- **Cobalto:** en alza por restricciones de exportación de RD Congo — vigilar impacto en costos de baterías de litio-ion.
+- **Cobre/Aluminio:** sin movimiento reportado hoy, pero exposición indirecta vía mayor actividad de storage y cableado eléctrico — monitorear próximos días.
+
+---
+
+SÍNTESIS EJECUTIVA
+El escenario de hoy combina un shock geopolítico (Hormuz/Irán) que encarece combustibles y logística, con una tendencia estructural de crecimiento en almacenamiento de energía que enfrenta cuellos de botella de materias primas (cobalto, litio). Para supply chain de AES, la prioridad inmediata es proteger contratos de gas natural y fletes marítimos ante la volatilidad de Hormuz, mientras se acelera la diversificación de proveedores de baterías ante riesgo de escasez de cobalto. La oferta de Alma SADI en Argentina (37 empresas) es una oportunidad concreta para comparar precios de mercado en storage antes de comprometer contratos de largo plazo. Se recomienda activar comités de riesgo de commodities esta semana dada la convergencia de señales de alta volatilidad en petróleo, gas y minerales críticos.
