@@ -1,0 +1,76 @@
+ORION ENERGY INTELLIGENCE — AES
+23 de August de 2026
+================================
+
+PULSO DE MERCADO
+El Brent sube a 94.39 USD/bbl (+0.7%) y el Henry Hub avanza 2.9% hasta 2.811 USD/MMBtu, reflejando la tensión geopolítica en el Golfo Pérsico (crisis de Hormuz) que está impulsando tanto crudo como gas natural pese a que los traders empiezan a cubrirse cortos apostando a una desescalada. El TTF europeo también sube (+1.1%), señal de que el mercado de gas global sigue nervioso, mientras el WTI cae levemente (-0.9%) en un movimiento divergente que sugiere volatilidad de corto plazo más que una tendencia consolidada. Para AES, esto se traduce en presión alcista sobre costos de gas natural en EE.UU. y posibles sobrecostos logísticos en operaciones que dependen de transporte marítimo y combustibles.
+
+## 1. Crisis de Hormuz dispara precios de petróleo y gas — ALTA
+
+**Qué está pasando:** Trump advirtió a Irán en medio de la crisis del Estrecho de Hormuz, lo que empujó al alza el crudo y el gas natural. En el sudeste de EE.UU. los precios spot de gas ya rozan los 4 USD/MMBtu por ola de calor, mientras el LNG feedgas superó 18 Bcf/d. Al mismo tiempo, hay señales contradictorias: los traders están shorteando petróleo como si la crisis ya hubiese terminado.
+**Impacto para AES:** Impacto directo en costos de generación térmica (Henry Hub) en EE.UU., México y República Dominicana, y en costos logísticos de transporte de equipos e insumos (transformadores, acero, componentes) que dependen de fletes marítimos con combustible más caro.
+**Historial:** Narrativa nueva, primera detección en 60 días.
+**Tensión narrativa:** Medios generalistas (oilprice) reportan escalada bélica mientras el comportamiento de mercado (shorts) sugiere que traders no creen que la crisis se sostenga — divergencia entre narrativa y posicionamiento financiero.
+**Acción recomendada:** No cerrar contratos de gas natural spot a mediano plazo hasta ver si la escalada se sostiene; evaluar hedging de combustible para logística en LATAM; monitorear diferencial Henry Hub vs TTF para decisiones de sourcing de GNL.
+
+---
+
+## 2. Boom y reconfiguración del mercado de baterías/almacenamiento — ALTA
+
+**Qué está pasando:** 37 empresas se presentaron a la licitación de almacenamiento de Alma SADI (Argentina), mientras a nivel global el mayor fabricante de baterías está migrando de EVs hacia storage estacionario, GM apuesta por baterías de sodio para reducir dependencia de China, y RD Congo restringe exportaciones de cobalto generando un squeeze en ese insumo crítico.
+**Impacto para AES:** Afecta directamente la categoría de equipos de almacenamiento (baterías) en Argentina, Chile y otros mercados con proyectos BESS. La restricción de cobalto y el pivot de fabricantes hacia storage pueden generar tanto oportunidades (mayor oferta dedicada a utility-scale) como riesgos de precio en celdas de litio-ion.
+**Historial:** Narrativa nueva.
+**Tensión narrativa:** ft_energy tiene tono positivo (oportunidad de negocio/tecnología), mientras power_magazine y oilprice tienen tono negativo (riesgo de squeeze de materiales y reconfiguración forzada de la industria).
+**Acción recomendada:** Diversificar proveedores de baterías más allá de cobalto-intensivos; evaluar tecnología sodio-ion como alternativa a mediano plazo; participar activamente en licitaciones tipo Alma SADI para asegurar posicionamiento en Argentina; monitorear impacto de restricciones de cobalto en pricing de celdas.
+
+---
+
+## 3. Reconfiguración de rutas logísticas por bloqueo de Hormuz — ALTA
+
+**Qué está pasando:** Golfo Pérsico en conversaciones para pipelines que eviten Hormuz; Malasia y otros compradores asiáticos están reestructurando su cadena de suministro de crudo; Kuwait ofrece petróleo a compradores asiáticos por primera vez desde el inicio del conflicto; carbón gana protagonismo en Asia por escasez de LNG.
+**Impacto para AES:** Riesgo de disrupción en cadenas globales de suministro de commodities y componentes (transformadores, acero, cables) que transitan por rutas marítimas del Golfo; posible extensión de lead times y aumento de fletes que afecta proyectos en construcción en todas las geografías de AES.
+**Historial:** Nueva.
+**Tensión narrativa:** No se detectaron contradicciones fuertes, pero el tono es consistentemente de alerta en todas las fuentes.
+**Acción recomendada:** Revisar con proveedores críticos (transformadores, cables) sus rutas de embarque y tiempos de tránsito; activar planes de contingencia con inventario de seguridad en insumos MRO críticos; explorar proveedores alternativos fuera de rutas dependientes de Hormuz.
+
+---
+
+## 4. Proyectos renovables y de storage a escala global — MEDIA
+
+**Qué está pasando:** Sungrow proveerá 7.5 GWh de storage para el proyecto RTC de Masdar en Abu Dhabi; Prysmian completó instalación de cables para el parque eólico offshore Sofia; Ark Energy logra aprobación de conexión a red en Australia.
+**Impacto para AES:** Relevante como benchmark de precios y capacidad de proveedores globales de cables (Prysmian) y sistemas de storage (Sungrow), ambos posibles proveedores o competidores por capacidad de fabricación en categorías clave de AES (cables eléctricos, baterías).
+**Historial:** Nueva.
+**Tensión narrativa:** Sin tensión relevante detectada.
+**Acción recomendada:** Evaluar disponibilidad de capacidad de producción de Prysmian y Sungrow para proyectos AES en LATAM dado que grandes proyectos internacionales podrían absorber capacidad de manufactura y generar cuellos de botella o subas de precio en cables y BESS.
+
+---
+
+## 5. Gobernanza corporativa en BP — BAJA
+
+**Qué está pasando:** Conflictos internos en el board de BP, presión de inversores por "mismanagement", cambios estructurales impulsados por el CEO y movimientos de venta de acciones por parte de directivos.
+**Impacto para AES:** Impacto indirecto y limitado; relevante solo si BP es contraparte en contratos de gas/LNG o suministro de combustibles en alguna de las geografías de AES.
+**Historial:** Nueva.
+**Tensión narrativa:** rigzone con tono positivo (nuevo liderazgo, resolución) vs ft_energy con tono negativo (crisis de gobernanza, "reino mal gestionado").
+**Acción recomendada:** Monitorear sin acción inmediata; solo escalar si BP es proveedor directo en algún contrato vigente de AES.
+
+---
+
+TENSIONES ACTIVAS
+- **Almacenamiento/baterías:** ft_energy presenta el pivot tecnológico como oportunidad estratégica, mientras power_magazine y oilprice lo enmarcan como síntoma de estrés en la cadena de suministro (cobalto, dependencia de China). AES debe leer ambas caras: hay oportunidad de negociación con nuevos entrantes, pero también riesgo real de squeeze de materiales.
+- **Energía nuclear/uranio:** oilprice y rigzone presentan el combustible nuclear gastado y microrreactores como solución estratégica ante el control ruso del uranio; energiaynegocios es más escéptico. No es categoría core de AES, pero indica hacia dónde migra la conversación energética global.
+- **BP:** Narrativa claramente dividida entre "resolución de crisis" (rigzone) y "crisis de gobernanza profunda" (ft_energy) — vigilar antes de profundizar cualquier relación comercial.
+
+---
+
+ALERTAS DE COSTO
+- **Gas natural (Henry Hub):** +2.9% hoy, con spot en sudeste de EE.UU. cerca de 4 USD/MMBtu — riesgo alcista para generación térmica.
+- **Brent:** +0.7%, sostenido por tensión en Hormuz — vigilar volatilidad ante shorts crecientes.
+- **WTI:** -0.9%, divergencia con Brent — posible señal de ajuste de spread regional.
+- **TTF:** +1.1%, gas europeo tensionado, relevante si AES tiene exposición a contratos indexados a Europa.
+- **Cobalto:** Restricciones de exportación en RD Congo generan squeeze — riesgo de encarecimiento en celdas de batería NMC/NCA.
+- **Litio:** Sin movimiento de precio reportado hoy, pero el pivot de fabricantes hacia storage estacionario podría reducir presión de demanda desde el sector EV, moderando precios a mediano plazo.
+
+---
+
+SÍNTESIS EJECUTIVA
+El mercado energético global está bajo tensión geopolítica (Hormuz) que empuja al alza gas y petróleo, con impacto directo en costos de generación térmica y logística de AES en todas sus geografías. En paralelo, la categoría de almacenamiento vive una reconfiguración estructural —oportunidad de negociación con nuevos proveedores, pero riesgo de squeeze en cobalto— que el equipo de sourcing debe monitorear de cerca dado el pipeline de proyectos BESS de AES en Argentina y Chile. La posible reconfiguración de rutas logísticas por Hormuz exige revisión inmediata de tiempos de tránsito y contingencias de inventario para transformadores, cables y MRO. Recomendación: priorizar diversificación de proveedores de baterías, activar hedging parcial de gas natural, y reforzar comunicación con proveedores críticos de cables/transformadores ante riesgo de cuellos de botella logísticos.
