@@ -1,0 +1,100 @@
+# ORION ENERGY INTELLIGENCE — AES
+24 de August de 2026
+================================
+
+## PULSO DE MERCADO
+El petróleo cae (Brent -1.7%, WTI -2.3%) pese a la escalada de tensión con Irán, señal de que el mercado está "shorteando" el riesgo de cierre del Estrecho de Hormuz antes de tiempo — una divergencia peligrosa que podría revertirse abruptamente. En paralelo, Henry Hub sube 1.9% por demanda de power burn y calor estival, mientras TTF se mantiene firme (+1.0%), reflejando que Europa y Asia siguen compitiendo por cargas de LNG en un contexto de shortage regional. Para AES, esto implica volatilidad de doble filo: costos de gas natural al alza para generación térmica y riesgo logístico latente en rutas de suministro de LNG.
+
+---
+
+## 1. Escalada Irán-Hormuz y volatilidad de gas/petróleo — ALTA
+
+**Qué está pasando:** Trump advirtió a Irán mientras traders apuestan a que la crisis de Hormuz ya pasó, generando una brecha entre percepción de mercado y riesgo geopolítico real. Simultáneamente, precios de gas natural en el sureste de EE.UU. se acercan a $4/MMBtu por calor extremo y consumo de generación eléctrica.
+
+**Impacto para AES:** Exposición directa en compras de gas natural/LNG para plantas térmicas en EE.UU., México, República Dominicana y Panamá. Un cierre efectivo de Hormuz dispararía tanto el costo de combustibles como fletes marítimos para equipos importados (transformadores, componentes eólicos/solares fabricados en Asia).
+
+**Historial:** Primera detección en 60 días — narrativa nueva y de alta persistencia (37 artículos).
+
+**Tensión narrativa:** Ninguna detectada explícitamente, pero hay contradicción de mercado: medios reportan escalada bélica mientras posicionamiento especulativo asume desescalada.
+
+**Acción recomendada:** Congelar contratos spot de gas/LNG que venzan en Q4 2026; evaluar hedging adicional o contratos a plazo antes de que el mercado corrija su lectura de riesgo. Revisar cláusulas de fuerza mayor en contratos de transporte marítimo para equipos críticos.
+
+---
+
+## 2. Boom de almacenamiento en baterías y presión sobre litio/cobalto — ALTA
+
+**Qué está pasando:** Alma SADI (Argentina) recibió 37 ofertas para proyectos de almacenamiento eléctrico, evidenciando fuerte demanda regional. En paralelo, RD Congo impone restricciones a exportación de cobalto que aprietan la cadena de suministro de baterías, mientras GM apuesta a tecnología de sodio para reducir dependencia de China, y solar superó a carbón en el mix eléctrico de EE.UU. por primera vez.
+
+**Impacto para AES:** Impacto directo en la categoría de equipos de almacenamiento (baterías) para proyectos en Argentina, Chile y EE.UU. La restricción de cobalto en RD Congo puede presionar precios de celdas de litio-ion en el corto plazo; la migración hacia sodio-ion (aún incipiente) podría ofrecer alternativa de diversificación de proveedores a mediano plazo.
+
+**Historial:** Nueva narrativa, pero conecta con tendencia estructural de crecimiento de storage ya visible en trimestres previos.
+
+**Tensión narrativa:** ALTA — gap de tono 2.00 entre ft_energy (framing positivo, oportunidad de negocio) vs. power_magazine/oilprice (framing negativo, riesgo de cadena de suministro y sobrecapacidad). AES debe leer ambas lecturas: oportunidad comercial en Argentina, pero riesgo de insumos.
+
+**Acción recomendada:** Participar activamente en el proceso de Alma SADI si aplica a proyectos de storage en Argentina. Solicitar a proveedores de baterías (CATL, BYD, etc.) cotizaciones actualizadas antes de que el efecto cobalto se traslade a precios. Explorar pilotos con tecnología sodio-ion como cobertura estratégica de mediano plazo.
+
+---
+
+## 3. Hormuz: rutas alternativas y reconfiguración logística global — MEDIA-ALTA
+
+**Qué está pasando:** Países del Golfo negocian pipelines para evadir Hormuz; Malasia y Kuwait reconfiguran su cadena de suministro de crudo; Asia aumenta uso de carbón por escasez de LNG. Un tanker vinculado a Irán sufrió un incendio, elevando el riesgo percibido de la ruta.
+
+**Impacto para AES:** Riesgo indirecto pero relevante: cualquier reconfiguración de rutas de LNG/crudo global puede encarecer fletes y extender lead times para importación de componentes (transformadores, cables, equipos eólicos) desde Asia hacia LATAM. También afecta indirectamente precios de referencia de gas que AES usa en contratos indexados.
+
+**Historial:** Nueva, pero comparte raíz temática con Narrativa #1 (Irán/Hormuz).
+
+**Tensión narrativa:** No se detectaron contradicciones directas entre fuentes.
+
+**Acción recomendada:** Mapear dependencia de proveedores críticos (transformadores, cables) que transiten por rutas del Golfo/Asia. Solicitar a logística escenarios de contingencia con lead times extendidos (+15-20 días) para Q4.
+
+---
+
+## 4. Nuclear y minerales críticos — BAJA (monitoreo)
+
+**Qué está pasando:** EE.UU. explora reprocesamiento de combustible nuclear gastado como alternativa a dependencia de uranio ruso; avances en microreactores nucleares.
+
+**Impacto para AES:** Bajo impacto directo (AES no opera nuclear), pero relevante como señal de diversificación energética regional y posible competencia por inversión en infraestructura eléctrica.
+
+**Historial:** Nueva.
+
+**Tensión narrativa:** ALTA — gap de tono 2.00 entre oilprice/rigzone (positivo) vs. energiaynegocios (negativo). Sin impacto operativo inmediato para AES.
+
+**Acción recomendada:** Monitoreo pasivo, sin acción inmediata requerida.
+
+---
+
+## 5. Gobierno corporativo BP — BAJA (sin impacto directo)
+
+**Qué está pasando:** Conflictos internos en el directorio de BP y cambios de estructura de liderazgo.
+
+**Impacto para AES:** Ninguno directo en supply chain, salvo posible efecto reputacional/de mercado si BP es contraparte en contratos de suministro de combustibles.
+
+**Historial:** Nueva.
+
+**Tensión narrativa:** ALTA — gap 2.00 entre rigzone (positivo) y ft_energy (negativo), típica cobertura contrastante de gobierno corporativo.
+
+**Acción recomendada:** Sin acción; solo verificar exposición contractual directa con BP si existe.
+
+---
+
+TENSIONES ACTIVAS
+────────────────────────────────────────
+1. **Storage/baterías (Alma SADI):** ft_energy destaca oportunidad de negocio; power_magazine y oilprice advierten sobre riesgos de sobreoferta y cadena de suministro de minerales críticos. **AES debe evaluar ambas caras antes de comprometer capex en storage.**
+2. **Nuclear/uranio:** oilprice y rigzone presentan el reprocesamiento de combustible como solución estratégica; energiaynegocios lo cuestiona. Impacto bajo para AES pero indicativo de sesgo editorial por fuente.
+3. **BP boardroom:** Cobertura polarizada sin relevancia operativa directa para AES.
+
+---
+
+ALERTAS DE COSTO
+────────────────────────────────────────
+- **Gas natural (Henry Hub):** +1.9% — presión alcista por calor y power burn; riesgo de continuar subiendo si persiste la ola de calor en el sureste de EE.UU.
+- **Petróleo (Brent/WTI):** -1.7% / -2.3% — caída que contradice el riesgo geopolítico activo; posible corrección abrupta al alza si Hormuz se materializa como amenaza real.
+- **TTF (gas Europa):** +1.0% — presión sostenida por competencia de LNG con Asia, relevante para benchmarking de contratos de importación.
+- **Cobalto:** sin precio spot reportado hoy, pero restricciones de exportación en RD Congo son señal temprana de posible encarecimiento en Q4 2026 — **monitorear de cerca para categoría de baterías.**
+- **Litio:** sin movimiento reportado hoy, pero demanda de storage (Alma SADI + proyectos globales) sostiene presión de mediano plazo.
+
+---
+
+SÍNTESIS EJECUTIVA
+────────────────────────────────────────
+El mercado energético hoy refleja una desconexión riesgosa entre geopolítica (escalada Irán-Hormuz) y pricing de petróleo, lo que exige a AES prepararse para volatilidad súbita en combustibles y fletes antes de fin de año. La oportunidad más concreta y accionable para AES está en el boom de almacenamiento de baterías en Argentina (Alma SADI) y la necesidad de asegurar suministro de litio/cobalto antes de que las restricciones de RD Congo impacten precios. Recomendamos: (1) asegurar cobertura de gas/LNG de corto plazo, (2) participar en licitaciones de storage en Argentina, y (3) mapear riesgo logístico de proveedores asiáticos ante posible disrupción en Hormuz. Las narrativas de nuclear y gobierno corporativo de BP requieren solo monitoreo pasivo esta semana.
