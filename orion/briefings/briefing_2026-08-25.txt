@@ -1,0 +1,26 @@
+ORION ENERGY INTELLIGENCE — AES
+25 de August de 2026
+================================
+
+PULSO DE MERCADO
+El petróleo cae con fuerza (Brent -4.4%, WTI -2.9%) pese a que persiste la narrativa de escalada Irán-Hormuz, mientras traders están "shorting" el riesgo geopolítico como si la crisis hubiera terminado — una divergencia peligrosa para quienes cubren combustibles y fletes. El Henry Hub sube levemente (+0.6%) por calor extremo y record de exportaciones LNG (feedgas >18 Bcf/d), mientras el TTF europeo cede (-2.3%). Para AES esto implica volatilidad de corto plazo en costos de gas para generación térmica (Panamá, Rep. Dominicana, El Salvador) y en fletes marítimos para equipos importados hacia LatAm.
+
+## 1. Divergencia entre riesgo geopolítico en Hormuz y caída real de precios de petróleo/gas — ALTA
+
+**Qué está pasando:** Se mantiene la narrativa de escalada militar EEUU-Irán y riesgo de cierre del Estrecho de Hormuz, pero el mercado se posiciona en corto en crudo como si el riesgo ya estuviera descontado; Brent y WTI caen con fuerza hoy. En paralelo, la demanda de gas en EEUU sube por ola de calor y exportaciones LNG en máximos históricos.
+**Impacto para AES:** Afecta directamente el costo de combustible en plantas térmicas de Panamá, Rep. Dominicana y El Salvador, y los costos de flete (bunker fuel) para importar transformadores, cables, aerogeneradores y paneles solares hacia LatAm.
+**Historial:** Primera detección en 60 días, aunque el trasfondo Irán-Hormuz es recurrente.
+**Tensión narrativa:** Narrativa geopolítica alcista vs. comportamiento real del mercado (posiciones cortas, precios cayendo) — riesgo alto de reversión abrupta si el conflicto escala.
+**Acción recomendada:** No fijar contratos de combustible/flete a precios spot actuales asumiendo estabilidad; evaluar coberturas de corto plazo; revisar cláusulas de fuel surcharge en contratos logísticos vigentes.
+
+## 2. Boom de almacenamiento en baterías y presión sobre cadena de litio/cobalto — ALTA
+
+**Qué está pasando:** Alma SADI (Argentina) recibió 37 ofertas para almacenamiento de electricidad en baterías. En simultáneo, RD Congo restringe exportaciones de cobalto, GM apuesta a baterías de sodio para reducir dependencia china, y el mayor fabricante global de baterías gira hacia storage estacionario y se aleja de EVs.
+**Impacto para AES:** Impacto directo en la categoría "equipos de almacenamiento (baterías)" y en costos de litio/cobalto para proyectos BESS en Argentina, Chile y EEUU. Alma SADI es una oportunidad concreta de sourcing/negocio regional; la restricción de cobalto puede presionar precios de celdas NMC, favoreciendo alternativas LFP/sodio.
+**Historial:** Nueva detección.
+**Tensión narrativa:** ft_energy con tono optimista/técnico sobre oportunidades de negocio vs. oilprice/power_magazine escépticos sobre saturación del sector (gap de tono 2.00).
+**Acción recomendada:** Monitorear de cerca el proceso Alma SADI para posicionar a AES Argentina como oferente/comprador estratégico; diversificar proveedores hacia celdas LFP/sodio-ion; incluir cláusulas de protección ante volatilidad de commodities de batería en nuevos contratos.
+
+## 5. Expansión global de proyectos de storage, cables y renovables — MEDIA
+
+**Qué está
