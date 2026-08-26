@@ -1,0 +1,69 @@
+ORION ENERGY INTELLIGENCE — AES
+26 de August de 2026
+================================
+
+PULSO DE MERCADO
+El crudo cae con fuerza (Brent -4.1%, WTI -2.7%) mientras los traders apuestan a que la crisis de Hormuz ya está "descontada", pero el gas natural en EEUU sube 3.7% por calor extremo y récord de feedgas para LNG (+18 Bcf/d). Esta divergencia —petróleo bajista vs. gas alcista— es la señal más relevante del día para AES, dado su fuerte dependencia de gas natural para generación térmica en RD, Panamá, El Salvador y México. El TTF europeo cae 5.2%, evidenciando sobreoferta en Europa que contrasta con la narrativa de escasez de LNG en Asia, reforzando la fragmentación regional de precios de gas.
+
+## 1. Divergencia crudo-gas por tensión Irán-Hormuz — ALTA
+
+**Qué está pasando:** Pese a la retórica sostenida sobre el conflicto Irán-EEUU y el riesgo en el Estrecho de Hormuz, el mercado de petróleo cae fuertemente (shorts masivos), mientras el gas natural doméstico en EEUU sube por demanda récord de power burn y exportación de LNG.
+**Impacto para AES:** El alza de Henry Hub encarece directamente el combustible para plantas térmicas de AES en EEUU y afecta indirectamente contratos indexados en RD, Panamá y El Salvador. La caída del crudo es favorable para costos logísticos y de transporte de insumos (transformadores, cables, acero).
+**Historial:** Primera detección en 60 días.
+**Tensión narrativa:** El precio de mercado contradice la narrativa geopolítica dominante: los medios siguen "calentando" el riesgo Hormuz, pero el crudo no lo valida.
+**Acción recomendada:** Aprovechar la debilidad del crudo para asegurar tarifas de flete/logística a corto plazo; cubrir exposición a Henry Hub con contratos forward ante presión alcista sostenida por demanda de verano y LNG.
+
+---
+
+## 2. Boom de almacenamiento de baterías y tensión en cobalto/litio — ALTA
+
+**Qué está pasando:** 37 empresas presentaron ofertas en la licitación Alma SADI de almacenamiento en Argentina, mientras RD Congo restringe exportaciones de cobalto generando escasez global, y GM avanza con baterías de sodio como alternativa a la dominancia china. Solar superó a carbón en el mix de generación de EEUU por primera vez.
+**Impacto para AES:** Impacto directo: AES participa activamente en storage en Argentina y tiene pipeline de proyectos BESS en Chile, Colombia y RD. La restricción de cobalto presiona costos de baterías NMC; conviene acelerar diversificación hacia química LFP o evaluar sodio-ion a mediano plazo.
+**Historial:** Primera detección en 60 días.
+**Tensión narrativa:** Gap de tono alto (2.00) entre ft_energy (framing técnico/positivo sobre innovación en baterías) vs. oilprice/power_magazine (escépticos sobre desaceleración de EVs y fabricantes de baterías).
+**Acción recomendada:** Priorizar RFQs con proveedores LFP para reducir exposición a cobalto; participar activamente en Alma SADI; monitorear evolución de precios de litio/cobalto semanalmente.
+
+---
+
+## 3. Reconfiguración logística global por riesgo en Hormuz — ALTA
+
+**Qué está pasando:** Países del Golfo negocian ductos alternativos para evitar Hormuz, Malasia reestructura su cadena de suministro de crudo, Asia aumenta uso de carbón por escasez de LNG, y un tanquero vinculado a Irán sufrió un incendio.
+**Impacto para AES:** Riesgo de mayores costos de flete y tiempos de entrega para importaciones críticas (transformadores, paneles solares, componentes eólicos) desde Asia y Medio Oriente. También presiona indirectamente los precios de LNG que abastecen plantas de AES en el Caribe y Centroamérica.
+**Historial:** Primera detección en 60 días.
+**Tensión narrativa:** Contradice implícitamente la Narrativa #1 (el mercado de crudo no refleja el riesgo que estos artículos describen).
+**Acción recomendada:** Revisar lead times y contratos de flete para equipos críticos importados; explorar rutas alternativas de suministro y stock de seguridad para componentes de origen asiático.
+
+---
+
+## 4. Expansión global de proyectos renovables y presión en cadena de suministro — MEDIA
+
+**Qué está pasando:** Anuncios de gran escala (Sungrow 7.5GWh en Abu Dhabi, cable Prysmian para offshore wind Sofia, tender solar en Omán) muestran una aceleración global en storage y renovables que podría tensionar la disponibilidad de componentes clave.
+**Impacto para AES:** Mayor demanda global de BESS, cables e inversores podría extender lead times y presionar precios para los proyectos solar+storage de AES en Chile, Colombia, Panamá y RD.
+**Historial:** Primera detección en 60 días.
+**Tensión narrativa:** No detectada.
+**Acción recomendada:** Anticipar órdenes de equipos críticos (inversores, cable submarino, BESS) con 2-3 meses adicionales de margen ante posible saturación de proveedores tier-1.
+
+---
+
+## 5. Nuclear como alternativa geopolítica — BAJA
+
+**Qué está pasando:** Se debate el uso de combustible nuclear gastado en EEUU frente al dominio ruso del uranio, avanzan pruebas de microrreactores, y el Reino Unido advierte impacto económico por el shock energético de Irán.
+**Impacto para AES:** Bajo impacto directo (AES no opera nuclear), pero relevante como señal de diversificación de matriz energética que podría influir en políticas regulatorias regionales.
+**Historial:** Primera detección en 60 días.
+**Tensión narrativa:** Gap de tono alto entre oilprice/rigzone (positivo) y energiaynegocios (crítico).
+**Acción recomendada:** Monitoreo pasivo; sin acción de compras inmediata.
+
+---
+
+## 6. Turbulencia corporativa en BP — BAJA
+
+**Qué está pasando:** Conflictos internos en el directorio de BP, presión de inversores por cambio de gestión y venta de acciones por parte de un ejecutivo veterano.
+**Impacto para AES:** Impacto mínimo en supply chain propio; relevante solo si BP es contraparte en contratos de suministro de gas/petróleo en algún mercado de AES.
+**Historial:** Primera detección en 60 días.
+**Tensión narrativa:** Gap de tono alto entre rigzone (enfoque en liderazgo/positivo) y ft_energy ("mismanaged kingdom"/negativo).
+**Acción recomendada:** Sin acción requerida; monitoreo pasivo.
+
+---
+
+TENSIONES ACTIVAS
+- **Storage/
